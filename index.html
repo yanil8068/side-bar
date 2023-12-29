@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sidebar</title>
+   <style>
+    * {
+        margin: 0;
+        font-family: sans-serif;
+        padding: 0;
+    }
+    
+    .ticon {
+        font-size: 40px;
+        margin: 10px;
+        cursor: pointer;
+    }
+    
+    .menu {
+        width: 25%;
+        height: 100vh;
+        background: black;
+        position: fixed;
+        top: 0px;
+        left: -25%;
+        transition: 1s;
+    }
+    
+    .menu h2 {
+        color: white;
+        padding: 25px;
+    }
+    
+    .menu ul li a {
+        display: block;
+        padding: 10px 15px;
+        color: white;
+        text-decoration: none;
+    }
+    
+    .close {
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        right: 10px;
+    }
+    
+    .smenu {
+        left: 0%;
+    }
+   @media  screen and (max-width: 600px) {
+    .ticon {
+        font-size: 20px;
+        margin: 5px;
+        
+    }
+    .menu {
+        width: 100%;
+        position: absolute;
+        
+        left: -100%;
+       
+    }
+    .menu h2 {
+        
+        padding: 15px;
+    }
+    .menu ul li a {
+        display: block;
+        padding: 5px 8px;
+        
+    }
+    .close {
+        font-size: 20px;
+       
+        position: absolute;
+        right: 5px;
+    }
+    
+    .smenu {
+        left: 0%;
+    }
+   }
+   @media  screen and (max-width: 768px) {
+    .ticon {
+        font-size: 20px;
+        margin: 5px;
+        
+    }
+    .menu {
+        width: 100%;
+        position: absolute;
+        
+        left: -100%;
+       
+    }
+    .menu h2 {
+        
+        padding: 15px;
+    }
+    .menu ul li a {
+        display: block;
+        padding: 5px 8px;
+        
+    }
+    .close {
+        font-size: 20px;
+       
+        position: absolute;
+        right: 5px;
+    }
+    
+    .smenu {
+        left: 0%;
+    }
+   }
+
+    
+</style>
+
+</head>
+<body>
+    <span class="ticon" onclick="showMenu()">&#9776;</span>
+    <div class="menu">
+        <span class="close" onclick="closeMenu()">&times;</span>
+        <h2>LOGO</h2>
+        <ul>
+<li><a href="#">home</a></li>
+<li><a href="#">about</a></li>
+<li><a href="#">course</a></li>
+<li><a href="#">gallery</a></li>
+<li><a href="#">contact us</a></li>
+<li><a href="#">enquiry</a></li>
+
+
+
+
+
+        </ul>
+    </div>
+
+    <script>
+        function showMenu(){
+         var m=document.querySelector('.menu');
+         m.classList.add('smenu');
+    
+        }
+         function closeMenu(){
+         var m=document.querySelector('.menu');
+         m.classList.remove('smenu');
+    
+        }
+    </script>  
+</body>
+
+</html>
